@@ -3,23 +3,11 @@ import { NextComponentType } from "next"
 import Image from "next/image"
 import React, { useState } from "react"
 import { selector, useRecoilState, useRecoilValue } from "recoil"
-import { selectedShiftAtom } from "../Atoms"
+import { selectedNameAtom, selectedShiftAtom } from "../Atoms"
 import ShiftSelection from "./ShiftSelection"
 
-const SelectedShiftOption = selector({
-  key: 'selectedShiftEditor', 
-  get: ({get}) => {
-    const shiftDetails = get(selectedShiftAtom);
-    
-    //@ts-ignore
-    return shiftDetails?.text;
-  },
-});
-
 const StepOne: NextComponentType = () => {
-  const SelectedShift = useRecoilValue(SelectedShiftOption);
-
-  const [UserLink, setUserLink] = useState({name: 'NefariousZ', link: "https://www.habbo.com/habbo-imaging/avatarimage?user=NefariousZ&direction=2&head_direction=2&action=crr=667&gesture=srp"})
+  const [UserLink, setUserLink] = useRecoilState(selectedNameAtom)
 
   const handleChange = (e:any) => {
     setUserLink({name: e.target.value, link:`https://www.habbo.com/habbo-imaging/avatarimage?user=${e.target.value}&direction=2&head_direction=2&action=crr=667&gesture=srp`})
@@ -55,9 +43,7 @@ const StepOne: NextComponentType = () => {
           </div>
 
         </div>
-
-        <p className="text-white">{SelectedShift}</p>
-
+        
         {/* 
         <div className="pt-4">
         

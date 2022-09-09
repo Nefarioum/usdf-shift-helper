@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import UsernameField from '../components/StepOne'
+import StepOne from '../components/StepOne'
 import AlertMessage from '../components/AlertMessage'
 import Footer from '../components/Footer'
+import StepTwo from '../components/StepTwo'
 
 
 const Home: NextPage = () => {
@@ -19,7 +20,8 @@ const Home: NextPage = () => {
       </h1>
 
       <AlertMessage />
-      <UsernameField />
+      <StepOne />
+      <StepTwo />
       
       <Footer />
     </div>

@@ -8,8 +8,8 @@ import { useRecoilState } from "recoil"
 import { selectedShiftAtom } from "../Atoms"
 
 const ShiftOptions = [
-    { id: 1, text: 'Welcome Desk'},
-    { id: 2, text: 'Front Desk'}
+    { id: 1, text: 'Welcome Desk', abbreviation: 'WD'},
+    { id: 2, text: 'Front Desk', abbreviation: 'FD'}
 ]
 
 const ShiftSelection: NextComponentType = () => {
