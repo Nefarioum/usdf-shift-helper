@@ -4,6 +4,8 @@ import { Combobox, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from "react"
 
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import { useRecoilState } from "recoil"
+import { selectedShiftAtom } from "../Atoms"
 
 const ShiftOptions = [
     { id: 1, text: 'Welcome Desk'},
@@ -11,7 +13,7 @@ const ShiftOptions = [
 ]
 
 const ShiftSelection: NextComponentType = () => {
-    const [shiftOption, setShiftOption] = useState(null)
+    const [shiftOption, setShiftOption] = useRecoilState(selectedShiftAtom)
     const [query, setQuery] = useState('')
   
     const filteredPeople =
@@ -95,4 +97,4 @@ const ShiftSelection: NextComponentType = () => {
     )
 }
 
-export default ShiftSelection
+export default ShiftSelection;
