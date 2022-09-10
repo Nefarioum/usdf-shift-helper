@@ -3,11 +3,12 @@ import { NextComponentType } from "next"
 import Image from "next/image"
 import React, { useState } from "react"
 import { selector, useRecoilState, useRecoilValue } from "recoil"
-import { selectedNameAtom, selectedShiftAtom } from "../Atoms"
+import { hasShiftStartedAtom, selectedNameAtom, selectedShiftAtom } from "../Atoms"
 import ShiftSelection from "./ShiftSelection"
 
 const StepOne: NextComponentType = () => {
   const [UserLink, setUserLink] = useRecoilState(selectedNameAtom)
+  const [StartedStatus, setStartStatus] = useRecoilState(hasShiftStartedAtom)
 
   const handleChange = (e:any) => {
     setUserLink({name: e.target.value, link:`https://www.habbo.com/habbo-imaging/avatarimage?user=${e.target.value}&direction=2&head_direction=2&action=crr=667&gesture=srp`})
@@ -15,6 +16,8 @@ const StepOne: NextComponentType = () => {
   
   return (
     <div className="flex flex-col items-center py-2">
+      {!StartedStatus &&
+        <div className="flex flex-col items-center py-2">
       <h1 className="text-emerald-400 font-bold text-xl md:text-xl font-raleway mt-4 rounded-xl hover:rounded-xl hover:shadow-lg hover:shadow-emerald-600 hover:bg-emerald-500 hover:text-emerald-100 px-4 py-2 transition duration-300 ease-in ">Step 1: Select your shift and Habbo character!</h1>
     
         <div className="flex mr-5">
@@ -65,7 +68,9 @@ const StepOne: NextComponentType = () => {
           </Dropdown.Item>
         </Dropdown>
         </div>
-        */}    
+        */} 
+        </div>
+        }
     </div>
   )
 }

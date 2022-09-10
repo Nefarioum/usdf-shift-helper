@@ -5,6 +5,7 @@ import StepOne from '../components/StepOne'
 import AlertMessage from '../components/AlertMessage'
 import Footer from '../components/Footer'
 import StepTwo from '../components/StepTwo'
+import StepThree from '../components/StepThree'
 
 
 const Home: NextPage = () => {
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <AlertMessage />
       <StepOne />
       <StepTwo />
+      <StepThree />
       
       <Footer />
     </div>

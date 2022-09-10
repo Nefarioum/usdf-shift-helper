@@ -13,5 +13,20 @@ export const selectedNameAtom = atom({
 
 export const hasShiftStartedAtom = atom({
   key: "shiftStated", 
-  default: {}, 
+  default: false
+});
+
+export const triggerTimerAtom = atom({
+  key: "triggerTimer", 
+  default: 100
+});
+
+export const middleOfShiftReached = atom({
+  key: "middleofShift", 
+  default: false
+});
+
+export const endOfShiftReached = atom({
+  key: "endofShift", 
+  default: false
 });
