@@ -1,6 +1,6 @@
 import { NextComponentType } from "next"
 
-import React, { useState } from "react"
+import React from "react"
 
 interface NumberProps {
   num: string | number,

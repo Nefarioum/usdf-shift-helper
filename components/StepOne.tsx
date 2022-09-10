@@ -1,9 +1,9 @@
 import { NextComponentType } from "next"
 
 import Image from "next/image"
-import React, { useState } from "react"
-import { selector, useRecoilState, useRecoilValue } from "recoil"
-import { hasShiftStartedAtom, selectedNameAtom, selectedShiftAtom } from "../Atoms"
+import React from "react"
+import { useRecoilState } from "recoil"
+import { hasShiftStartedAtom, selectedNameAtom } from "../Atoms"
 import ShiftSelection from "./ShiftSelection"
 
 const StepOne: NextComponentType = () => {

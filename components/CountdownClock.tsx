@@ -1,6 +1,6 @@
 import { NextComponentType } from "next"
 
-import React, { useState } from "react"
+import React from "react"
 import NumberArea from "./NumberArea"
 
 interface CountdownProps{

@@ -1,6 +1,6 @@
 import { NextComponentType } from "next"
 
-import React, { useState } from "react"
+import React from "react"
 import { selector, useRecoilState, useRecoilValue } from "recoil";
 import { endOfShiftReached, hasShiftStartedAtom, middleOfShiftReached, selectedNameAtom, selectedShiftAtom, triggerTimerAtom } from "../Atoms";
 
