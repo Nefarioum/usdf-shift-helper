@@ -9,7 +9,12 @@ import { selectedShiftAtom } from "../Atoms"
 
 const ShiftOptions = [
     { id: 1, text: 'Welcome Desk', abbreviation: 'WD'},
-    { id: 2, text: 'Front Desk', abbreviation: 'FD'}
+    { id: 2, text: 'Front Row', abbreviation: 'FR'},
+    { id: 3, text: 'Left Duty Desk Operator', abbreviation: 'LDDO'},
+    { id: 4, text: 'Right Duty Desk Operator', abbreviation: 'RDDO'},
+    { id: 5, text: 'Left Sentry', abbreviation: 'LSentry'},
+    { id: 6, text: 'Right Sentry', abbreviation: 'RSentry'},
+    { id: 7, text: 'Info Desk', abbreviation: 'ID'}
 ]
 
 const ShiftSelection: NextComponentType = () => {
@@ -51,7 +56,7 @@ const ShiftSelection: NextComponentType = () => {
             leaveTo="opacity-0"
             afterLeave={() => setQuery('')}
           >
-            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-50">
               {filteredPeople.length === 0 && query !== '' ? (
                 <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
                   Nothing found.
