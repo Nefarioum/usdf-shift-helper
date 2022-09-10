@@ -50,7 +50,7 @@ const StepTwo: NextComponentType = () => {
     //@ts-ignore
     const EndNumber = Array.from(new Date(StartedStatus.getTime() + 30*60000).getMinutes().toString()).map(Number).length == 1 ? "0" + new Date(StartedStatus.getTime() + 30*60000).getMinutes() : new Date(StartedStatus.getTime() + 30*60000).getMinutes()
 
-    StartMessage = SelectedName + ' 0.5 ' + SelectedShift + ' End @ :' + EndNumber + '. May I please have either 1 Officer or 2 CWs confirm my shift, please?';
+    StartMessage = SelectedName + ' 0.5 ' + SelectedShift + ' End @ :' + EndNumber + '. May either 1 Officer or 2 CWs confirm my shift, please?';
   } else if (midShift) {
     //@ts-ignore
     const MidNumber = Array.from(new Date(StartedStatus.getTime() + 15*60000).getMinutes().toString()).map(Number).length == 1 ? "0" + new Date(StartedStatus.getTime() + 15*60000).getMinutes() : new Date(StartedStatus.getTime() + 15*60000).getMinutes()

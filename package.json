@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.0.10",
     "flowbite": "^1.5.3",
     "flowbite-react": "^0.1.10",
+    "intercept-stdout": "^0.1.2",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

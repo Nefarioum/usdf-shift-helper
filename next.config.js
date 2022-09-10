@@ -7,4 +7,9 @@ const nextConfig = {
   },
 }
 
+// next.config.js
+const intercept = require('intercept-stdout');
+
+intercept((text) => (text.includes('Duplicate atom key') ? '' : text));
+
 module.exports = nextConfig
