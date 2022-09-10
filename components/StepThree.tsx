@@ -96,7 +96,7 @@ const StepThree: NextComponentType = () => {
         />
 
         <ReactHowler
-          src='/mid-shift.mp3'
+          src='/usdf/sound/mid-shift.mp3'
           playing={soundPlaying.sound1}
           volume={0.4}
           loop={false}
@@ -104,7 +104,7 @@ const StepThree: NextComponentType = () => {
         />
 
         <ReactHowler
-          src='/end-shift.mp3'
+          src='/usdf/sound/end-shift.mp3'
           playing={soundPlaying.sound2}
           volume={0.4}
           loop={false}
@@ -112,7 +112,7 @@ const StepThree: NextComponentType = () => {
         />
 
         <ReactHowler
-          src='http://goldfirestudios.com/proj/howlerjs/sound.ogg'
+          src='/usdf/sound/music.ogg'
           playing={soundPlaying.sound3}
           volume={0.2}
           loop={false}

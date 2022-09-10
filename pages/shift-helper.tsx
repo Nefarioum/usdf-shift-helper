@@ -14,7 +14,20 @@ const ShiftHelper: NextPage = () => {
     <div className="flex min-h-screen bg-gray-800 flex-col items-center py-2">
       <Head>
         <title>Habbo USDF Shift Helper</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="canonical" content="https://nefarious.tech/usdf/shift-helper" />
+        <meta name="description" content="A tool which allows you to input a type of shift and be provided with notifications at mid-point & end-point and provides the required messages to send in HQ!" />
+        <meta name="keywords" content="Nefarious, Development, Open source, Code, Programmer" />
+        <meta name="theme-color" content="#64fab2" />
+        <meta property="og:site_name" content="Habbo USDF Shift Helper by NefariousZ" />
+        <meta property="og:image" content="https://nefarious.tech/usdf/images/ShiftHelperCoverImage.jpg" />
+        <meta property="og:image:secure_url" content="https://nefarious.tech/usdf/images/ShiftHelperCoverImage.jpg" />
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="560" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:image:alt" content="nefarious.tech/usdf/shift-helper" />
+        <meta property="og:image:type" content="image/jpg" />
+        <meta name="author" content="Nefarious" />
+        <link rel="icon" href="usdf/favicon.ico" />
       </Head>
       <Link href="/"><a className="text-emerald-300 font-raleway text-xs">Go back</a></Link>
 
