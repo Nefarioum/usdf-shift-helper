@@ -6,6 +6,7 @@ import AlertMessage from '../components/AlertMessage'
 import Footer from '../components/Footer'
 import StepTwo from '../components/StepTwo'
 import StepThree from '../components/StepThree'
+import Link from 'next/link'
 
 
 const ShiftHelper: NextPage = () => {
@@ -15,6 +16,7 @@ const ShiftHelper: NextPage = () => {
         <title>Habbo USDF Shift Helper</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Link href="/"><a className="text-emerald-300 font-raleway text-xs">Go back</a></Link>
 
       <h1 className="text-emerald-200 font-bold text-2xl md:text-4xl font-raleway mt-4 rounded-xl hover:rounded-xl hover:shadow-lg hover:shadow-emerald-600 hover:bg-emerald-500 hover:text-emerald-100 px-4 py-2 transition duration-300 ease-in ">
         Habbo USDF Shift Helper
