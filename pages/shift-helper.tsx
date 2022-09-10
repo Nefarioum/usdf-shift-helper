@@ -27,7 +27,7 @@ const ShiftHelper: NextPage = () => {
         <meta property="og:image:alt" content="nefarious.tech/usdf/shift-helper" />
         <meta property="og:image:type" content="image/jpg" />
         <meta name="author" content="Nefarious" />
-        <link rel="icon" href="usdf/favicon.ico" />
+        <link rel="icon" href="/usdf/favicon.ico" />
       </Head>
       <Link href="/"><a className="text-emerald-300 font-raleway text-xs">Go back</a></Link>
 

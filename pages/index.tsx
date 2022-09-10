@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <meta property="og:image:alt" content="nefarious.tech/usdf/" />
         <meta property="og:image:type" content="image/jpg" />
         <meta name="author" content="Nefarious" />
-        <link rel="icon" href="usdf/favicon.ico" />
+        <link rel="icon" href="/usdf/favicon.ico" />
       </Head>
 
       <h1 className="text-emerald-400 font-bold text-xl md:text-xl font-raleway mt-4 rounded-xl hover:rounded-xl hover:shadow-lg hover:shadow-emerald-600 hover:bg-emerald-500 hover:text-emerald-100 px-4 py-2 transition duration-300 ease-in ">Habbo USDF Tools</h1>
