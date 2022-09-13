@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import StepOne from '../components/StepOne'
-import AlertMessage from '../components/AlertMessage'
+import StepOne from '../components/shift-helper-components/StepOne'
+import AlertMessage from '../components/shift-helper-components/AlertMessage'
 import Footer from '../components/Footer'
-import StepTwo from '../components/StepTwo'
-import StepThree from '../components/StepThree'
+import StepTwo from '../components/shift-helper-components/StepTwo'
+import StepThree from '../components/shift-helper-components/StepThree'
 import Link from 'next/link'
 
 

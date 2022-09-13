@@ -3,7 +3,7 @@ import { NextComponentType } from "next"
 import Image from "next/image"
 import React from "react"
 import { useRecoilState } from "recoil"
-import { hasShiftStartedAtom, selectedNameAtom } from "../Atoms"
+import { hasShiftStartedAtom, selectedNameAtom } from "../../Atoms"
 import ShiftSelection from "./ShiftSelection"
 
 const StepOne: NextComponentType = () => {

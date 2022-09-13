@@ -1,6 +1,6 @@
 import { NextComponentType } from "next"
 import { selector, useRecoilState, useRecoilValue } from "recoil";
-import { endOfShiftReached, hasShiftStartedAtom, middleOfShiftReached, triggerTimerAtom } from "../Atoms";
+import { endOfShiftReached, hasShiftStartedAtom, middleOfShiftReached, triggerTimerAtom } from "../../Atoms";
 
 import React, { useEffect, useState } from "react"
 import CountdownClock from "./CountdownClock";
@@ -85,7 +85,7 @@ const StepThree: NextComponentType = () => {
       {hasShiftStarted && 
         <div className="flex flex-col items-center py-2">
         {/* @ts-ignore */}
-        <h1 className="text-emerald-400 font-bold text-xl md:text-xl font-raleway mt-4 rounded-xl hover:rounded-xl hover:shadow-lg hover:shadow-emerald-600 hover:bg-emerald-500 hover:text-emerald-100 px-4 py-2 transition duration-300 ease-in ">Your done! Your shift has begun! Your mid will be at :{Array.from(new Date(hasShiftStarted.getTime() + 15*60000).getMinutes().toString()).map(Number).length == 1 ? "0" + new Date(hasShiftStarted.getTime() + 15*60000).getMinutes() : new Date(hasShiftStarted.getTime() + 15*60000).getMinutes() } & the shift will end at :{Array.from(new Date(hasShiftStarted.getTime() + 30*60000).getMinutes().toString()).map(Number).length == 1 ? "0" + new Date(hasShiftStarted.getTime() + 30*60000).getMinutes() : new Date(hasShiftStarted.getTime() + 30*60000).getMinutes() }.</h1>
+        <h1 className="text-emerald-400 font-bold text-xl md:text-xl font-raleway mt-4 rounded-xl hover:rounded-xl hover:shadow-lg hover:shadow-emerald-600 hover:bg-emerald-500 hover:text-emerald-100 px-4 py-2 transition duration-300 ease-in ">You are done! Your shift has begun! Your mid will be at :{Array.from(new Date(hasShiftStarted.getTime() + 15*60000).getMinutes().toString()).map(Number).length == 1 ? "0" + new Date(hasShiftStarted.getTime() + 15*60000).getMinutes() : new Date(hasShiftStarted.getTime() + 15*60000).getMinutes() } & the shift will end at :{Array.from(new Date(hasShiftStarted.getTime() + 30*60000).getMinutes().toString()).map(Number).length == 1 ? "0" + new Date(hasShiftStarted.getTime() + 30*60000).getMinutes() : new Date(hasShiftStarted.getTime() + 30*60000).getMinutes() }.</h1>
         <p className="text-emerald-300 font-semibold text-center ">{ endShift ? `You have completed your shift! Please refresh the page to start a new shift` :  midShift ? `We will let you know with a sound notification when you have reached the end of the shift and provide the end-shift message!` : `We will let you know with a sound notification when you have reached Mid and provide the mid-shift message!`}</p>    
 
         <CountdownClock         

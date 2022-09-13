@@ -5,7 +5,7 @@ import React, { Fragment, useState } from "react"
 
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { useRecoilState } from "recoil"
-import { selectedShiftAtom } from "../Atoms"
+import { selectedShiftAtom } from "../../Atoms"
 
 const ShiftOptions = [
     { id: 1, text: 'Welcome Desk', abbreviation: 'WD'},

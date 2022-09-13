@@ -2,7 +2,7 @@ import { NextComponentType } from "next"
 
 import React from "react"
 import { selector, useRecoilState, useRecoilValue } from "recoil";
-import { endOfShiftReached, hasShiftStartedAtom, middleOfShiftReached, selectedNameAtom, selectedShiftAtom, triggerTimerAtom } from "../Atoms";
+import { endOfShiftReached, hasShiftStartedAtom, middleOfShiftReached, selectedNameAtom, selectedShiftAtom, triggerTimerAtom } from "../../Atoms";
 
 import { toast } from 'react-hot-toast';
 

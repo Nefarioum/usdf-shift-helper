@@ -18,7 +18,7 @@ const AlertMessage: NextComponentType = () => {
       additionalContent={
         <React.Fragment>
           <div className="mt-2 mb-4 text-sm text-green-700 dark:text-green-800">
-            This website not is afiliated or hosted by USDF in any way. It is simply a tool to help USDF members 
+            This website is not affiliated or hosted by USDF in any way. It is simply a tool to help USDF members 
             with shift time management.<br></br> Please do not approach USDF staff for help or feature requests. If any issues are found with the website, please contact NefariousZ <br></br>via Discord.
           </div>
           <div className="flex">
