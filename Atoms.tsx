@@ -8,7 +8,7 @@ export const selectedShiftAtom = atom({
 
 export const selectedNameAtom = atom({
   key: "selectedName", 
-  default: {name: 'NefariousZ', link: "https://www.habbo.com/habbo-imaging/avatarimage?user=NefariousZ&direction=2&head_direction=2&action=crr=667&gesture=srp"}, 
+  default: {name: 'NefariousZ', link: "https://www.habbo.com/habbo-imaging/avatarimage?user=NefariousZ&direction=2&head_direction=2&action=crr=667&gesture=srp", changed: false}, 
 });
 
 export const hasShiftStartedAtom = atom({
@@ -29,4 +29,9 @@ export const middleOfShiftReached = atom({
 export const endOfShiftReached = atom({
   key: "endofShift", 
   default: false
+});
+
+export const selectBranchAtom = atom({
+  key: "selectbranchatom", 
+  default: {branch: '', colour: '', backgroundImage: '', selected: false}
 });

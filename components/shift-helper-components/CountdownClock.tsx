@@ -2,7 +2,6 @@ import { NextComponentType } from "next"
 
 import React from "react"
 import NumberArea from "./NumberArea"
-
 interface CountdownProps{
     minutes: number | string,
     minute:number | string ,

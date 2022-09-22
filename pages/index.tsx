@@ -27,6 +27,7 @@ const Home: NextPage = () => {
 
       <h1 className="text-emerald-400 font-bold text-xl md:text-xl font-raleway mt-4 rounded-xl hover:rounded-xl hover:shadow-lg hover:shadow-emerald-600 hover:bg-emerald-500 hover:text-emerald-100 px-4 py-2 transition duration-300 ease-in ">Habbo USDF Tools</h1>
       <Link href="/shift-helper"><a className="text-emerald-300 font-raleway italic text-sm">Shift Helper</a></Link>
+      <Link href="/profile-pic-generator"><a className="text-emerald-300 font-raleway italic text-sm">Profile Picture Generator</a></Link>
       <p className="text-emerald-500 font-semibold font-raleway italic text-sm pt-4">More tools coming soon!</p>
 
       <Footer />

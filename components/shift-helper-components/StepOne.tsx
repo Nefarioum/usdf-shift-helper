@@ -11,7 +11,7 @@ const StepOne: NextComponentType = () => {
   const [StartedStatus, setStartStatus] = useRecoilState(hasShiftStartedAtom)
 
   const handleChange = (e:any) => {
-    setUserLink({name: e.target.value, link:`https://www.habbo.com/habbo-imaging/avatarimage?user=${e.target.value}&direction=2&head_direction=2&action=crr=667&gesture=srp`})
+    setUserLink({name: e.target.value, link:`https://www.habbo.com/habbo-imaging/avatarimage?user=${e.target.value}&direction=2&head_direction=2&action=crr=667&gesture=srp`, changed: true})
   }
   
   return (
