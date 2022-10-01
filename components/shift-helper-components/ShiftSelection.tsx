@@ -14,7 +14,8 @@ const ShiftOptions = [
     { id: 4, text: 'Right Duty Desk Operator', abbreviation: 'RDDO'},
     { id: 5, text: 'Left Sentry', abbreviation: 'LSentry'},
     { id: 6, text: 'Right Sentry', abbreviation: 'RSentry'},
-    { id: 7, text: 'Info Desk', abbreviation: 'ID'}
+    { id: 7, text: 'Info Desk', abbreviation: 'ID'},
+    { id: 8, text: 'Bar', abbreviation: 'Bar'}
 ]
 
 const ShiftSelection: NextComponentType = () => {

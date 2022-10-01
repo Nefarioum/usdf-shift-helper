@@ -1,6 +1,6 @@
 import { NextComponentType } from "next"
 import { selector, useRecoilState, useRecoilValue } from "recoil";
-import { endOfShiftReached, hasShiftStartedAtom, middleOfShiftReached, triggerTimerAtom } from "../../Atoms";
+import { endOfShiftReached, hasShiftStartedAtom, middleOfShiftReached, setSoundAtom, triggerTimerAtom } from "../../Atoms";
 
 import React, { useEffect, useState } from "react"
 import CountdownClock from "./CountdownClock";
@@ -26,7 +26,7 @@ const StepThree: NextComponentType = () => {
 
   const [mins, setMins] = useState<number>(0);
   const [secs, setSecs] = useState<number>(0);
-  const [soundPlaying, setSound] = useState({sound1: false, sound2: false, sound3: false});
+  const [soundPlaying, setSound] = useRecoilState(setSoundAtom);
 
   let isPlayingSound = false
 

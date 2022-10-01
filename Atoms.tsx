@@ -31,6 +31,12 @@ export const endOfShiftReached = atom({
   default: false
 });
 
+
+export const setSoundAtom = atom({
+  key: "setSoundAtom", 
+  default: {sound1: false, sound2: false, sound3: false}
+});
+
 export const selectBranchAtom = atom({
   key: "selectbranchatom", 
   default: {branch: '', colour: '', backgroundImage: '', selected: false}

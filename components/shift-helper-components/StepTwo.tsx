@@ -2,7 +2,7 @@ import { NextComponentType } from "next"
 
 import React from "react"
 import { selector, useRecoilState, useRecoilValue } from "recoil";
-import { endOfShiftReached, hasShiftStartedAtom, middleOfShiftReached, selectedNameAtom, selectedShiftAtom, triggerTimerAtom } from "../../Atoms";
+import { endOfShiftReached, hasShiftStartedAtom, middleOfShiftReached, selectedNameAtom, selectedShiftAtom, setSoundAtom, triggerTimerAtom } from "../../Atoms";
 
 import { toast } from 'react-hot-toast';
 
@@ -35,6 +35,7 @@ const StepTwo: NextComponentType = () => {
   const [StartedStatus, setStartStatus] = useRecoilState(hasShiftStartedAtom);
   const [midShift, setMidShift] = useRecoilState(middleOfShiftReached);
   const [endShift, setEndShift] = useRecoilState(endOfShiftReached);
+  const [soundPlaying, setSound] = useRecoilState(setSoundAtom);
 
   const CurrentTime = new Date
   let CurrentMinutes = CurrentTime.getMinutes();
@@ -88,7 +89,33 @@ const StepTwo: NextComponentType = () => {
         <p className="mt-1 text-sm text-emerald-400" id="file_input_help">SVG, PNG, JPG or GIF only.</p>)
 
       */}
+        {endShift &&
+        <button type="submit" className="text-white bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700" onClick={() => {
+            const RefreshedTime = new Date  
+            CurrentMinutes = RefreshedTime.getMinutes();
+            StartMessage = SelectedName + ' 0.5 ' + SelectedShift + ' Start @ :' + (CurrentMinutes.toString().length === 1 ? '0' + CurrentMinutes  : CurrentMinutes);
+
+            navigator.clipboard.writeText(StartMessage);
+
+            toast.success("Successfully copied your start message to keyboard & started your shift!")
+            //@ts-ignore
+            setStartStatus(RefreshedTime);
+            setMidShift(false);
+            setEndShift(false);
+            setSound({sound1: false, sound2: false, sound3: false});
+            console.log(time)
+            setTime(100);
+            setInterval(() => {
+              setTime(30);
+            }, 500)
+
+            console.log(time)
+          }}>Start a new shift with same settings!</button>
+        }
       </div>
+
+
+
       
       } 
 
